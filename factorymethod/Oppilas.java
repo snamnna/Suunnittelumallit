@@ -9,4 +9,6 @@ public class Oppilas extends AterioivaOtus {
     public Ruoka createRuoka(){
         return new Suklaa();
     }
+
+    //Testikommentti
 }
