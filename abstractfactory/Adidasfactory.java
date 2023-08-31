@@ -4,26 +4,22 @@ public class Adidasfactory implements AbstractFactory{
 
     @Override
     public Jeans createJeans() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createJeans'");
+        return new Jeans();
     }
 
     @Override
     public Tshirt createTshirt() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createTshirt'");
+        return new Tshirt();
     }
 
     @Override
     public Cap createCap() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createCap'");
+       return new Cap();
     }
 
     @Override
     public Shoes createShoes() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createShoes'");
+        return new Shoes();
     }
     
     
