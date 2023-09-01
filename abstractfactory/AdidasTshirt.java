@@ -1,5 +1,7 @@
 package abstractfactory;
 
-public class AdidasTshirt {
-    
+public class AdidasTshirt extends Tshirt{
+    public String toString(){
+        return "adidas tshirt";
+    }
 }

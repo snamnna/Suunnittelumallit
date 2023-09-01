@@ -1,5 +1,7 @@
 package abstractfactory;
 
-public class BossTshirt {
-    
+public class BossTshirt extends Tshirt {
+    public String toString(){
+        return "boss tshirt";
+    }
 }

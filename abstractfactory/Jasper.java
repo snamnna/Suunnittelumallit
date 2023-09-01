@@ -1,6 +1,6 @@
 package abstractfactory;
 
-public abstract class Jasper extends Adidasfactory{
+public abstract class Jasper {
     Jeans jeans = null;
     Tshirt tshirt = null;
     Cap cap = null;
