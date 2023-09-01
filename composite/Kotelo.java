@@ -27,7 +27,7 @@ public class Kotelo implements Laiteosa{
         for(Laiteosa osa : komponentit){
             kokohinta += osa.haeHinta();
         }
-        return kokohinta;
+        return hinta + kokohinta;
     }
 
 }
