@@ -1,5 +1,5 @@
 package composite;
 
-public interface Laiteosa {
-    
+public interface Laiteosa{
+    double haeHinta();
 }
