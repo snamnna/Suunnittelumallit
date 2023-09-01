@@ -6,12 +6,7 @@ import java.util.List;
 public class Emolevy implements Laiteosa{
 
     //Emolevyn oma hinta
-    private double hinta;
-
-    //Hinta asetetaan emolevyn luonnin yhteydessä
-    public Emolevy(){
-        this.hinta = 500.0;
-    }
+    private double hinta = 500.0;
     
     //Tehdään lista komponenteille jotka emolevyssä
     private List<Laiteosa> komponentit = new ArrayList<>();

@@ -6,12 +6,7 @@ import java.util.List;
 public class Kotelo implements Laiteosa{
     
     //Kotelon oma hinta
-    private double hinta;
-
-    //Hinta asetetaan kotelon luonnin yhteydessä
-    public Kotelo(){
-        this.hinta = 400.0;
-    }
+    private double hinta = 400.00;
     
     //Tehdään lista komponenteille jotka kotelossa
     private List<Laiteosa> komponentit = new ArrayList<>();
