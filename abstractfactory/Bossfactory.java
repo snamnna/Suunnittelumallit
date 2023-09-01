@@ -1,29 +1,25 @@
 package abstractfactory;
 
-public class Bossfactory implements AbstractFactory{
+public class Bossfactory implements ClothingFactory{
 
     @Override
-    public Jeans createJeans() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createJeans'");
+    public Clothing createJeans() {
+        return new BossJeans();
     }
 
     @Override
-    public Tshirt createTshirt() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createTshirt'");
+    public Clothing createTshirt() {
+        return new BossTshirt();
     }
 
     @Override
-    public Cap createCap() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createCap'");
+    public Clothing createCap() {
+       return new BossCap();
     }
 
     @Override
-    public Shoes createShoes() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createShoes'");
+    public Clothing createShoes() {
+        return new BossShoes();
     }
     
 }

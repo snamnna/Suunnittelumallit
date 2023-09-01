@@ -1,20 +1,23 @@
 package abstractfactory;
 
 public abstract class Jasper {
-    Jeans jeans = null;
-    Tshirt tshirt = null;
-    Cap cap = null;
-    Shoes shoes = null;
+    public static void main(String[] args) {
 
-    public abstract Jeans createJeans();
-    public abstract Tshirt createTshirt();
-    public abstract Cap createCap();
-    public abstract Shoes createShoes();
+        //HUOM, modulaarisuus Boss vaatteisiin vaihtamalla onnistuu muokkaamalla vain Adidasfactory --> Bossfactory
 
-    public void pukeutua(){
-        if (jeans == null){
-            jeans = createJeans();
-            System.out.println("I have " + jeans + " jeans!");
-        }
+        //Ensin jasper pueutuu adidas vaatteisiin, luodaan tehdas
+        ClothingFactory factory = new Adidasfactory();
+
+        //Pukeutuminen
+        Clothing jeans = factory.createJeans();
+        Clothing tshirt = factory.createTshirt();
+        Clothing cap = factory.createCap();
+        Clothing shoes = factory.createShoes();
+
+        System.out.println("I'm wearing: ");
+        System.out.println(jeans);
+        System.out.println(tshirt);
+        System.out.println(cap);
+        System.out.println(shoes);
     }
 }

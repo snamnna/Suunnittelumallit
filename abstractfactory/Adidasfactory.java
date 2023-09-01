@@ -1,25 +1,25 @@
 package abstractfactory;
 
-public class Adidasfactory implements AbstractFactory{
+public class Adidasfactory implements ClothingFactory{
 
     @Override
-    public Jeans createJeans() {
-        return new Jeans();
+    public Clothing createJeans() {
+        return new AdidasJeans();
     }
 
     @Override
-    public Tshirt createTshirt() {
-        return new Tshirt();
+    public Clothing createTshirt() {
+        return new AdidasTshirt();
     }
 
     @Override
-    public Cap createCap() {
-       return new Cap();
+    public Clothing createCap() {
+       return new AdidasCap();
     }
 
     @Override
-    public Shoes createShoes() {
-        return new Shoes();
+    public Clothing createShoes() {
+        return new AdidasShoes();
     }
     
     

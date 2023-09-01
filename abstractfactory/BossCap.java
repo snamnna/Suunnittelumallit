@@ -1,6 +1,6 @@
 package abstractfactory;
 
-public class BossCap extends Cap {
+public class BossCap implements Clothing {
     public String toString(){
         return "boss cap";
     }
