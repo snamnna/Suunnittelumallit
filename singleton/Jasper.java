@@ -7,7 +7,8 @@ public abstract class Jasper {
 
         //Ensin jasper pueutuu adidas vaatteisiin
         //Ei luoda tehdasta singletonissa, vaan haetaan instanssi
-        ClothingFactory factory = AdidasfactorySingleton.getInstance();
+
+        ClothingFactory factory = Adidasfactory.getInstance();
 
         //Pukeutuminen
         Clothing jeans = factory.createJeans();
