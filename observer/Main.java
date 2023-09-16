@@ -1,14 +1,21 @@
 package observer;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class Main {
     public static void main(String[] args) {
         
         ClockTimer clockTimer = new ClockTimer();
-        DigitalClock digital1 = new DigitalClock(clockTimer);
-        DigitalClock digital2 = new DigitalClock(clockTimer);
+        DigitalClock digital = new DigitalClock(clockTimer);
 
-        clockTimer.tick();
-        clockTimer.tick();
-        clockTimer.tick();
+        Timer timer = new Timer();
+
+        timer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                clockTimer.tick();
+            }
+        }, 0, 1000);
     }
 }
