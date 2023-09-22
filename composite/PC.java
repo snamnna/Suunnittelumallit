@@ -9,14 +9,14 @@ public class PC {
         Laiteosa verkkokortti = new Verkkokortti();
 
         //Lisätään laiteosat emolevyyn
-        Emolevy emolevy = new Emolevy();
+        Laiteosa emolevy = new Emolevy();
         emolevy.lisaaLaiteosa(prossu);
         emolevy.lisaaLaiteosa(muisti);
         emolevy.lisaaLaiteosa(gpu);
         emolevy.lisaaLaiteosa(verkkokortti);
 
         //Lisätään emolevy koteloon
-        Kotelo kotelonSisus = new Kotelo();
+        Laiteosa kotelonSisus = new Kotelo();
         kotelonSisus.lisaaLaiteosa(emolevy);
 
         double kokoHinta = kotelonSisus.haeHinta();
