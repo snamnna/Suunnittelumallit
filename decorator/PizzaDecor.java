@@ -2,7 +2,10 @@ package decorator;
 
 public abstract class PizzaDecor implements Pizza {
 
-    public abstract double getPrice();
-    public abstract String description();
+    protected Pizza pizza;
+
+    public PizzaDecor(Pizza pizza){
+        this.pizza = pizza;
+    }
 
 }
