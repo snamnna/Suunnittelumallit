@@ -1,5 +1,7 @@
 package template_method;
 
+import java.util.Random;
+
 public class DiceGame extends Game{
     private int[] scores;
     private int scoreToWin;
@@ -13,18 +15,23 @@ public class DiceGame extends Game{
     }
     @Override
     void play(int playerNro) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'play'");
+        Random random = new Random();
+        int diceRoll = random.nextInt(6) + 1;
+        scores[playerNro] += diceRoll;
+        System.out.println("Player " + playerNro + " got " + diceRoll + " with their dice!");
     }
     @Override
     boolean gameFinished() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'gameFinished'");
+        for(int score : scores) {
+            if (score > scoreToWin){
+                return true;
+            }
+        }
+        return false;
     }
     @Override
     void winner() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'winner'");
+        
     }
 
     
