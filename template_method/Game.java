@@ -23,7 +23,7 @@ abstract class Game {
         int currentPlayer = 1;
         while(!gameFinished()){
             play(currentPlayer);
-            currentPlayer = (currentPlayer == 1) ? 2 : 1;
+            currentPlayer = (currentPlayer % playerCount) + 1;
         }
         winner();
     }

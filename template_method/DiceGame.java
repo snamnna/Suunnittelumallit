@@ -3,6 +3,9 @@ package template_method;
 import java.util.Random;
 
 public class DiceGame extends Game{
+
+    // Pelin säännöt - se ei automaattisesti voita joka saa ensimmäisenä 100, kierros pelataan aina loppuun ja jos monta saa samalla
+    //kierroksella 100 tai yli, tulee tasapeli.
     private int[] scores;
     private int scoreToWin;
     private int currentPlayer;
