@@ -20,10 +20,10 @@ abstract class Game {
     public final void playRound(int playerCount) {
         this.playerCount = playerCount;
         initializeGame();
-        int currentPlayer = 0;
+        int currentPlayer = 1;
         while(!gameFinished()){
             play(currentPlayer);
-            currentPlayer = (currentPlayer + 1) % playerCount;
+            currentPlayer = (currentPlayer == 1) ? 2 : 1;
         }
         winner();
     }

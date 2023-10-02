@@ -11,14 +11,15 @@ public class DiceGame extends Game{
     void initializeGame() {
         scores = new int[playerCount];
         scoreToWin = 100;
-        currentPlayer = 0;
+        currentPlayer = 1;
     }
     @Override
     void play(int playerNro) {
         Random random = new Random();
         int diceRoll = random.nextInt(6) + 1;
-        scores[playerNro] += diceRoll;
+        scores[playerNro - 1] += diceRoll;
         System.out.println("Player " + playerNro + " got " + diceRoll + " with their dice!");
+        System.out.println("Player " + playerNro + " has now " + scores[playerNro - 1] + " points.");
     }
     @Override
     boolean gameFinished() {
@@ -31,8 +32,21 @@ public class DiceGame extends Game{
     }
     @Override
     void winner() {
+        int winner = -1;
+        for (int i = 0; i < scores.length; i++){
+            if(scores[i] >= scoreToWin) {
+                if(winner == -1){
+                    winner = i + 1;
+                } else { 
+                    // Jos molemmat pääsevät yli satasen samalla kierroksella
+                    System.out.println("It's a draw!");
+                    return;
+                }
+            }
+        }
+        if(winner != -1) {
+            System.out.println("Congratulations for player number " + winner + ", they won!");
         
-    }
-
-    
+        }
+    }    
  }
