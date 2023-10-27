@@ -5,11 +5,11 @@ import java.util.Random;
 public class Player implements Runnable{
 
     private final Riddler riddler;
-    private final Memento memento;
+    private final Riddler.Memento memento;
     private final int playerIndex;
     private boolean gameOver;
 
-    public Player(Riddler r, Memento memento, int playerIndex){
+    public Player(Riddler r, Riddler.Memento memento, int playerIndex){
         this.riddler = r;
         this.memento = memento;
         this.playerIndex = playerIndex;

@@ -12,6 +12,19 @@ public class Riddler {
         this.playerCount = playerCount;
         this.playerGuesses = new int[playerCount];
     }
+
+    public class Memento {
+        //Tänne tallennetaan arvottu luku, sama kun luennolla keltainen lappu
+        private int number;
+    
+        public Memento(int number){
+            this.number = number;
+        }
+    
+        public int getNumber(){
+            return number;
+        }
+    }
     
     public Memento liityPeliin(){
 
@@ -26,16 +39,18 @@ public class Riddler {
         if (guess == memento.getNumber()) {
             correctGuesses += 1;
             playerGuesses[playerIndex] = correctGuesses;
+            System.out.println("Player number " + playerIndex + " guessed correctly!");
             if(correctGuesses == playerCount){
                 System.out.println("Game finished, everyone guessed right!");
                 return true;
-            } else {
-                System.out.println("Player number " + playerIndex + " guessed correctly!");
-                return true;
-            }
-        } else {
-            System.out.println("Try again player number " + playerIndex + ", your guess " + guess + " is not right.");
-            return false;
         }
+            return true;
+        } else {
+                System.out.println("Try again player number " + playerIndex + ", your guess " + guess + " is not right.");
+                return false;
+        }
+
+        
+            
     }
 }
